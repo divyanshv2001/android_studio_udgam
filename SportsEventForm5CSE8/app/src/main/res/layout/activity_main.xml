@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/nameBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rollnoBox"/>
+
+    <EditText
+        android:id="@+id/rollnoBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Roll No."
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/collegeList"
+        app:layout_constraintTop_toBottomOf="@+id/nameBox"/>
+
+    <Spinner
+        android:id="@+id/collegeList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollnoBox"
+        app:layout_constraintBottom_toTopOf="@+id/chessBox"/>
+
+    <CheckBox
+        android:id="@+id/carromsBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carroms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/chessBox"
+        app:layout_constraintTop_toBottomOf="@+id/collegeList"
+        app:layout_constraintBottom_toTopOf="@+id/registerBtn"/>
+
+    <CheckBox
+        android:id="@+id/chessBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chess"
+        app:layout_constraintStart_toEndOf="@+id/carromsBox"
+        app:layout_constraintEnd_toStartOf="@+id/cricketBox"
+        app:layout_constraintTop_toBottomOf="@+id/collegeList"
+        app:layout_constraintBottom_toTopOf="@+id/registerBtn"/>
+
+    <CheckBox
+        android:id="@+id/cricketBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cricket"
+        app:layout_constraintStart_toEndOf="@+id/chessBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/collegeList"
+        app:layout_constraintBottom_toTopOf="@+id/registerBtn"/>
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chessBox"
+        app:layout_constraintBottom_toTopOf="@+id/result"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerBtn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

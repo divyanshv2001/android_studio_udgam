@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/aBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter a value"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bBox"/>
+
+    <EditText
+        android:id="@+id/bBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter b value"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/addBtn"
+        app:layout_constraintTop_toBottomOf="@+id/aBox"/>
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/subBtn"
+        app:layout_constraintTop_toBottomOf="@+id/bBox"
+        app:layout_constraintBottom_toTopOf="@+id/mulBtn"/>
+
+    <Button
+        android:id="@+id/subBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sub"
+        app:layout_constraintBottom_toTopOf="@+id/divBtn"
+        app:layout_constraintTop_toBottomOf="@+id/bBox"
+        app:layout_constraintStart_toEndOf="@+id/addBtn"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/mulBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mul"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divBtn"
+        app:layout_constraintTop_toBottomOf="@+id/addBtn"
+        app:layout_constraintBottom_toTopOf="@+id/result"/>
+
+    <Button
+        android:id="@+id/divBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Div"
+        app:layout_constraintStart_toEndOf="@+id/mulBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subBtn"
+        app:layout_constraintBottom_toTopOf="@+id/result"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mulBtn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">vote_eliglibility_multiple_screens</string>
+    <string name="title_activity_result">result_activity</string>
+</resources>
