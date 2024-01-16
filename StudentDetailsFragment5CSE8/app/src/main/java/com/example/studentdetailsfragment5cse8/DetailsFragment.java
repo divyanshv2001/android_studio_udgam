@@ -71,6 +71,5 @@ public class DetailsFragment extends Fragment {
     }
     public void display(int i){
         res.setText("Name:"+names[i]+"\nSection Number:"+secno[i]);
-
     }
 }
